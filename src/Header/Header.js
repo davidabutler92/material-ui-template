@@ -9,11 +9,11 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { useStyles } from './Header.styles';
 
 
-export default function Header() {
+export default function Header({ setDrawerOpen }) {
   const classes = useStyles();
     return (
      <AppBar className={classes.root} position='sticky'>
-       <IconButton>
+       <IconButton onClick={() => {setDrawerOpen(true)}}>
         <MenuIcon />
        </IconButton>
      </AppBar>
